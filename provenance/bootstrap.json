@@ -72,7 +72,7 @@
     {
       "mode": "0644",
       "path": "build.gradle",
-      "sha256": "8ab4be4dd6761345a4e14b50a9949148f2240e7c92ea2b2b696046d310d239af",
+      "sha256": "010942ec468896a14088b769d87813373eac5afe1c605f051eb416cac44006e6",
       "size": 19518
     },
     {
@@ -375,5 +375,5 @@
       "status": "pending"
     }
   ],
-  "template_sha256": "96f6497d2ea982ea702c0208ddf202393bb331b1b24f6600bd9a328ca62f4540"
+  "template_sha256": "b0da48419153389192d0c3ab422cc0b1ee24168fd0feaed257e05d986edc7553"
 }

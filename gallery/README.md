@@ -1,11 +1,20 @@
-# Placeholder gallery
+# Nature's Aura visual gallery
 
-This generated gallery proves only the deterministic data-pack mechanics and a
-single `minecraft:stone` stock control at `(176, 100, 175)`. It does not claim
-Nature's Aura support.
+This deterministic gallery contains 27 cases in the bounded envelope
+`(172, 99, 172)` through `(204, 103, 192)`. It covers empty and filled item
+hosts, both Wood Stand item branches, the Ender Crate and half-filled End Aura
+Timer, all four projectile directions, active limiter arrangements, all four
+owned tint families, every golden-leaves stage, connected gold powder, and a
+stock stone control.
 
-Replace `cases.py` with the smallest real defect fixture and stock controls,
-then keep the stable commands:
+Run it with:
+
+```text
+/function naturesaura_gallery:build
+/function naturesaura_gallery:teleport
+```
+
+The teleport target is `(188, 110, 182)`. Generate and audit the archive with:
 
 ```bash
 python gallery/generate.py
@@ -14,6 +23,5 @@ python gallery/lint.py
 bash gallery/package.sh /tmp/naturesaura-gallery.zip
 ```
 
-The release gate rejects the `SCAFFOLD_NOT_IMPLEMENTED` marker in `cases.py`.
-Keep gallery generation deterministic, bounded, synthetic where practical, and
-free of candidate assets or captured meshes.
+The datapack contains no candidate assets, captured meshes, entities, or
+privilege-changing commands.

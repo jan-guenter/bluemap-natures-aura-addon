@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
-"""Lint the generated placeholder gallery without starting Minecraft."""
+"""Lint the generated Nature's Aura gallery without starting Minecraft."""
 
 from __future__ import annotations
 
@@ -15,6 +15,7 @@ import generate
 
 
 ROOT = Path(__file__).resolve().parent
+EXPECTED_CASES = 27
 
 
 def main() -> int:
@@ -31,36 +32,52 @@ def main() -> int:
     )
     if load_tag != {"values": [f"{cases.NAMESPACE}:load"]}:
         raise ValueError("load tag differs from the exact namespace")
-    if len(cases.PLACEMENTS) != 1:
-        raise ValueError("placeholder must contain exactly one stock control")
+    if len(cases.PLACEMENTS) != EXPECTED_CASES:
+        raise ValueError(f"gallery must contain exactly {EXPECTED_CASES} cases")
+    if len({placement.case_id for placement in cases.PLACEMENTS}) != EXPECTED_CASES:
+        raise ValueError("gallery case identifiers must be unique")
 
-    placement = cases.PLACEMENTS[0]
-    if placement.block_state != "minecraft:stone" or placement.expected != (
-        "stock-visible"
-    ):
-        raise ValueError("placeholder must remain an honest stone stock control")
     minimum_x, minimum_y, minimum_z, maximum_x, maximum_y, maximum_z = (
         cases.ENVELOPE
     )
-    if not (
-        minimum_x <= placement.x <= maximum_x
-        and minimum_y <= placement.y <= maximum_y
-        and minimum_z <= placement.z <= maximum_z
-    ):
-        raise ValueError("placeholder placement escaped its bounded envelope")
+    for placement in cases.PLACEMENTS:
+        if not (
+            minimum_x <= placement.x <= maximum_x
+            and minimum_y <= placement.y <= maximum_y
+            and minimum_z <= placement.z <= maximum_z
+        ):
+            raise ValueError(f"placement escaped envelope: {placement.case_id}")
+
+    states = {placement.block_state.split("[", 1)[0] for placement in cases.PLACEMENTS}
+    required = {
+        "naturesaura:nature_altar", "naturesaura:offering_table",
+        "naturesaura:wood_stand", "naturesaura:ender_crate",
+        "naturesaura:aura_timer", "naturesaura:projectile_generator",
+        "naturesaura:generator_limit_remover", "naturesaura:lower_limiter",
+        "naturesaura:ancient_leaves", "naturesaura:golden_leaves",
+        "naturesaura:gold_powder", "naturesaura:spring",
+    }
+    if not required.issubset(states):
+        raise ValueError("gallery omits an owned renderer host")
 
     function_root = ROOT / f"datapack/data/{cases.NAMESPACE}/function"
     functions = "\n".join(
         path.read_text(encoding="utf-8")
         for path in sorted(function_root.glob("*.mcfunction"))
     )
-    if len(re.findall(r"^setblock ", functions, re.MULTILINE)) != 1:
-        raise ValueError("placeholder must place exactly one block")
+    if len(re.findall(r"^setblock ", functions, re.MULTILINE)) != EXPECTED_CASES:
+        raise ValueError("generated setblock count differs from cases")
+    expected_merges = sum(placement.nbt is not None for placement in cases.PLACEMENTS)
+    if len(re.findall(r"^data merge block ", functions, re.MULTILINE)) != expected_merges:
+        raise ValueError("generated block-entity merge count differs from cases")
     lowered = functions.lower()
-    for forbidden in ("summon ", "data merge", "op ", "deop ", "stop "):
+    for forbidden in ("summon ", "op ", "deop ", "stop "):
         if forbidden in lowered:
-            raise ValueError(f"forbidden placeholder command: {forbidden}")
-    print("placeholder gallery lint passed: one bounded stock control")
+            raise ValueError(f"forbidden gallery command: {forbidden}")
+    print(
+        f"Nature's Aura gallery lint passed: {EXPECTED_CASES} bounded cases, "
+        f"{expected_merges} block-entity fixtures"
+    )
     return 0
 
 
