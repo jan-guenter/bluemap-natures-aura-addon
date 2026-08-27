@@ -3,7 +3,7 @@
 A Java 21 BlueMap add-on for the exact `naturesaura-41.9-mc1.21.1` profile in All the Mons
 `1.2.0` / Minecraft `1.21.1`.
 
-Status: exact-profile rendering prototype awaiting owner visual acceptance.
+Status: owner-accepted `0.1.0-alpha.1` release candidate.
 It preserves BlueMap's stock models and adds installed-resource projections
 for eight block-entity render hosts plus the four audited tint defects.
 
