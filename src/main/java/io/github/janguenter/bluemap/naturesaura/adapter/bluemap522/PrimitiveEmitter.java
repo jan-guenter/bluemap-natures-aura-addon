@@ -93,36 +93,18 @@ final class PrimitiveEmitter {
             int color,
             boolean fullbright
     ) {
-        return horizontalPlane(block, target, texture,
-                minimumX, maximumX, y, minimumZ, maximumZ,
-                color, fullbright, 0);
-    }
-
-    boolean horizontalPlane(
-            BlockNeighborhood block,
-            TileModelView target,
-            Key texture,
-            float minimumX,
-            float maximumX,
-            float y,
-            float minimumZ,
-            float maximumZ,
-            int color,
-            boolean fullbright,
-            int quarterTurns
-    ) {
         if (resourcePack.getTextures().get(texture) == null) {
             return false;
         }
         FaceLighting.Sample light = FaceLighting.sample(block, Direction.UP);
         emitQuad(
                 target, textures.get(texture),
-                rotate(new Vertex[]{
+                new Vertex[]{
                         new Vertex(minimumX, y, maximumZ),
                         new Vertex(maximumX, y, maximumZ),
                         new Vertex(maximumX, y, minimumZ),
                         new Vertex(minimumX, y, minimumZ)
-                }, quarterTurns),
+                },
                 0F, 0F, 1F, 1F, color,
                 fullbright ? 15 : light.sunlight(),
                 fullbright ? 15 : light.blocklight(), true

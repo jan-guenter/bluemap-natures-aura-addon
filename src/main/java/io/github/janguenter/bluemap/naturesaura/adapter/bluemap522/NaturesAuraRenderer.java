@@ -20,7 +20,6 @@ import de.bluecolored.bluemap.core.world.block.ExtendedBlock;
 import io.github.janguenter.bluemap.naturesaura.activation.AddonRuntime;
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules;
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.ItemStackView;
-import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.GoldPowderShape;
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.TimerFill;
 
 import java.util.IdentityHashMap;
@@ -112,10 +111,6 @@ final class NaturesAuraRenderer implements BlockRenderer {
             renderSpring(block, target, mapColor);
             return;
         }
-        if ("naturesaura:gold_powder".equals(id)
-                && renderGoldPowder(block, target, mapColor)) {
-            return;
-        }
         int start = target.getTileModel().size();
         stock(block, variant, target, mapColor);
         int tint = switch (id) {
@@ -126,46 +121,9 @@ final class NaturesAuraRenderer implements BlockRenderer {
         };
         applyTint(target, start, tint);
         multiplyMapColor(mapColor, tint);
-    }
-
-    private boolean renderGoldPowder(
-            BlockNeighborhood block,
-            TileModelView target,
-            Color mapColor
-    ) {
-        GoldPowderShape shape = NaturesAuraRenderRules.goldPowderShape(
-                block.getBlockState().getProperties()
-        );
-        Key texture;
-        int quarterTurns;
-        switch (shape) {
-            case DOT -> {
-                texture = ProfileResourceExtension.GOLD_POWDER_DOT;
-                quarterTurns = 0;
-            }
-            case NORTH_SOUTH -> {
-                texture = ProfileResourceExtension.GOLD_POWDER_LINE_0;
-                quarterTurns = 0;
-            }
-            case EAST_WEST -> {
-                texture = ProfileResourceExtension.GOLD_POWDER_LINE_1;
-                quarterTurns = 3;
-            }
-            case STOCK -> {
-                return false;
-            }
-            default -> throw new IllegalStateException("unknown gold-powder shape");
+        if (!NaturesAuraRenderRules.contributesLowResolutionColor(id)) {
+            mapColor.set(0F, 0F, 0F, 0F, true);
         }
-        if (!primitives.horizontalPlane(
-                block, target, texture,
-                0F, 1F, 0.015625F, 0F, 1F,
-                NaturesAuraRenderRules.GOLD_POWDER, false, quarterTurns
-        )) {
-            throw new IllegalStateException("gold-powder texture unavailable");
-        }
-        mapColor.set(resourcePack.getTextures().get(texture).getColorPremultiplied());
-        multiplyMapColor(mapColor, NaturesAuraRenderRules.GOLD_POWDER);
-        return true;
     }
 
     private void renderSpring(

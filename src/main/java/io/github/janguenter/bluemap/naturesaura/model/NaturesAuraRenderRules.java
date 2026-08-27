@@ -54,29 +54,8 @@ public final class NaturesAuraRenderRules {
         return blend(foliage, GOLDEN_LEAVES, stage / 3F);
     }
 
-    public static GoldPowderShape goldPowderShape(Map<String, String> properties) {
-        String north = properties.get("north");
-        String east = properties.get("east");
-        String south = properties.get("south");
-        String west = properties.get("west");
-        if (!powderSide(north) || !powderSide(east)
-                || !powderSide(south) || !powderSide(west)
-                || "up".equals(north) || "up".equals(east)
-                || "up".equals(south) || "up".equals(west)) {
-            return GoldPowderShape.STOCK;
-        }
-        boolean northSouth = "side".equals(north) || "side".equals(south);
-        boolean eastWest = "side".equals(east) || "side".equals(west);
-        if (!northSouth && !eastWest) {
-            return GoldPowderShape.DOT;
-        }
-        if (northSouth && !eastWest) {
-            return GoldPowderShape.NORTH_SOUTH;
-        }
-        if (eastWest && !northSouth) {
-            return GoldPowderShape.EAST_WEST;
-        }
-        return GoldPowderShape.STOCK;
+    public static boolean contributesLowResolutionColor(String blockId) {
+        return !id("gold_powder").equals(blockId);
     }
 
     public static int projectileQuarterTurns(Integer ordinal) {
@@ -164,10 +143,6 @@ public final class NaturesAuraRenderRules {
         return color >>> shift & 0xFF;
     }
 
-    private static boolean powderSide(String value) {
-        return "none".equals(value) || "side".equals(value) || "up".equals(value);
-    }
-
     private static int number(Object value, int fallback) {
         return value instanceof Number number ? number.intValue() : fallback;
     }
@@ -190,13 +165,6 @@ public final class NaturesAuraRenderRules {
                 throw new IllegalArgumentException("timer fill is outside 0..1");
             }
         }
-    }
-
-    public enum GoldPowderShape {
-        DOT,
-        NORTH_SOUTH,
-        EAST_WEST,
-        STOCK
     }
 
     private record AuraType(int color, int ticksPerBottle) {

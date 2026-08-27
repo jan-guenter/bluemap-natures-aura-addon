@@ -3,12 +3,13 @@
 package io.github.janguenter.bluemap.naturesaura.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.ItemStackView;
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.TimerFill;
-import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.GoldPowderShape;
 import java.util.List;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
@@ -33,28 +34,11 @@ class NaturesAuraRenderRulesTest {
     }
 
     @Test
-    void goldPowderUsesFlatPlanesOnlyForDotAndStraightLines() {
-        assertEquals(GoldPowderShape.DOT, NaturesAuraRenderRules.goldPowderShape(
-                Map.of("north", "none", "east", "none",
-                        "south", "none", "west", "none")));
-        assertEquals(GoldPowderShape.EAST_WEST,
-                NaturesAuraRenderRules.goldPowderShape(
-                        Map.of("north", "none", "east", "side",
-                                "south", "none", "west", "none")));
-        assertEquals(GoldPowderShape.EAST_WEST,
-                NaturesAuraRenderRules.goldPowderShape(
-                        Map.of("north", "none", "east", "side",
-                                "south", "none", "west", "side")));
-        assertEquals(GoldPowderShape.NORTH_SOUTH,
-                NaturesAuraRenderRules.goldPowderShape(
-                        Map.of("north", "side", "east", "none",
-                                "south", "side", "west", "none")));
-        assertEquals(GoldPowderShape.STOCK, NaturesAuraRenderRules.goldPowderShape(
-                Map.of("north", "side", "east", "side",
-                        "south", "none", "west", "none")));
-        assertEquals(GoldPowderShape.STOCK, NaturesAuraRenderRules.goldPowderShape(
-                Map.of("north", "up", "east", "none",
-                        "south", "none", "west", "none")));
+    void goldPowderDoesNotRaiseTheLowResolutionHeightMesh() {
+        assertFalse(NaturesAuraRenderRules.contributesLowResolutionColor(
+                "naturesaura:gold_powder"));
+        assertTrue(NaturesAuraRenderRules.contributesLowResolutionColor(
+                "naturesaura:golden_leaves"));
     }
 
     @Test
