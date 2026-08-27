@@ -31,7 +31,7 @@ final class ProfileResourceExtension implements ResourcePackExtension {
             Key.parse("naturesaura:models/lower_limiter_glint");
     static final Key SPRING_FRAME = Key.parse("naturesaura:block/spring");
     static final Key SPRING_WATER = Key.parse("naturesaura:block/spring_water");
-    static final Key END_PORTAL = Key.parse("minecraft:environment/end_portal");
+    static final Key END_PORTAL = Key.parse("minecraft:environment/end_sky");
     private static final Map<Key, Integer> REQUIRED_TEXTURES = Map.of(
             TIMER_AURA, 64,
             PROJECTILE_OVERLAY, 64,
@@ -39,7 +39,7 @@ final class ProfileResourceExtension implements ResourcePackExtension {
             LOWER_GLINT, 64,
             SPRING_FRAME, 16,
             SPRING_WATER, 16,
-            END_PORTAL, 16
+            END_PORTAL, 128
     );
 
     private final ResourcePack resourcePack;
