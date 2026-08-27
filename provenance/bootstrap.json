@@ -1,0 +1,379 @@
+{
+  "deterministic": true,
+  "family_id": "naturesaura",
+  "generator": "bluemap-java21-addon-scaffold-v1",
+  "initial_files": [
+    {
+      "mode": "0644",
+      "path": ".gitattributes",
+      "sha256": "c0b5802900ed076871e7878f051eb2cd8d7918dbfada3f40f86300fa7325252d",
+      "size": 58
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "8a2e43387e0e41dcbaf04f023c1c0a84ca0445917e56bcc61dfdfa7b2f4c9e2b",
+      "size": 4348
+    },
+    {
+      "mode": "0644",
+      "path": ".github/workflows/release.yml",
+      "sha256": "3178af9ab28a1b008d038305df41638b740949224ff6a970b6fe80c50bce758f",
+      "size": 6482
+    },
+    {
+      "mode": "0644",
+      "path": ".gitignore",
+      "sha256": "a5030053f21da04c319ab8abe4020d2ee1d488430e79f0b8ce04f1d7f29a93f6",
+      "size": 105
+    },
+    {
+      "mode": "0644",
+      "path": "AGENTS.md",
+      "sha256": "5e535e757f35cd120882ab1a025954bb1166a1b730d95bbe52adb487df3de65f",
+      "size": 2101
+    },
+    {
+      "mode": "0644",
+      "path": "CHANGELOG.md",
+      "sha256": "5f43c29e45acebdea17c11b8553de3493e82aeee60a376c780abb9422a5fb09e",
+      "size": 207
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE",
+      "sha256": "f079a10f7ddfae72170c16c8be18685f05e36309955c3858e9f863d4cae7cfce",
+      "size": 1068
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE-BlueMap",
+      "sha256": "f1c190d4a1ff29606cbed7a0d97fc7b7117cc2e1169e19caa753198957dbbfd6",
+      "size": 1122
+    },
+    {
+      "mode": "0644",
+      "path": "NOTICE.md",
+      "sha256": "702a6fd0dcf6d4a415509c535e70032ba4b974bbdc04ed386155ca49382f310d",
+      "size": 428
+    },
+    {
+      "mode": "0644",
+      "path": "README.md",
+      "sha256": "34f374500553f06f65b1b48be5ba750db12aea4e57f5d2c246ed0f652d00f867",
+      "size": 1547
+    },
+    {
+      "mode": "0644",
+      "path": "THIRD_PARTY.md",
+      "sha256": "2354d6172c1f28ec1e2f4603c79e4f64f633b097006b6e95bcf9750a68e83de9",
+      "size": 617
+    },
+    {
+      "mode": "0644",
+      "path": "build.gradle",
+      "sha256": "8ab4be4dd6761345a4e14b50a9949148f2240e7c92ea2b2b696046d310d239af",
+      "size": 19518
+    },
+    {
+      "mode": "0644",
+      "path": "config/checkstyle/checkstyle.xml",
+      "sha256": "77fe7b6d9a70f527daf7288ad2955e467f1059ef75b0c3d0d63694c8bea285d7",
+      "size": 791
+    },
+    {
+      "mode": "0644",
+      "path": "docs/EXECUTION.md",
+      "sha256": "7f506ee26b6a6209bb5132dda06b770da6738e325b3252767205b6b6eb922325",
+      "size": 2041
+    },
+    {
+      "mode": "0644",
+      "path": "docs/RELEASING.md",
+      "sha256": "7488e66595e35648c172f99f43104e5dc8bdc99569a106b25bb628ef7f4b4b5d",
+      "size": 1522
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/README.md",
+      "sha256": "3d029ea0fcc6e051a66973dbaa2252e65dbe8ac26272ee1aed9e44563e6c9ae8",
+      "size": 667
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/SHA256SUMS",
+      "sha256": "97ae5d6cce72508eb2196d4ec3693e6832c137eebd141e065d2f896c9ce4da85",
+      "size": 914
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/cases.py",
+      "sha256": "7b5472c73b1904b1daf95b7f71caf8dda1b2999df14ff5b142046a7a5a332c9a",
+      "size": 757
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/minecraft/tags/function/load.json",
+      "sha256": "4be9432f237af369da1a8c9071c4d91014098070c51ff4446ea5176aa9339be3",
+      "size": 53
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/naturesaura_gallery/function/build.mcfunction",
+      "sha256": "86dcf4a8270bf7b6be927280e6a4a47bb0510a57914fb06d246cc023092b61d4",
+      "size": 204
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/naturesaura_gallery/function/clear.mcfunction",
+      "sha256": "4507683d949af7e2312781de5e2ef0cb5d090ff6584e08f003a406bb4586b5d3",
+      "size": 91
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/naturesaura_gallery/function/load.mcfunction",
+      "sha256": "03282940b3afaed4947d0e771d5a527917904a863ac7cf51b45e8da6441d9090",
+      "size": 170
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/naturesaura_gallery/function/release.mcfunction",
+      "sha256": "527faf923328dcb64c9d8e159f806434de3690e280951546092239f548eca8c1",
+      "size": 84
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/data/naturesaura_gallery/function/verify.mcfunction",
+      "sha256": "d6da826f1132b0a762b43c3635cfd149a8ac8d22b249865daf494449f4a9dcfe",
+      "size": 251
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/datapack/pack.mcmeta",
+      "sha256": "53c2c40036842a077342c2ff39fdf087f36c6336fc8acfc8067cec6ec0fa512b",
+      "size": 108
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/generate.py",
+      "sha256": "37e41387e36836dfa965f7be20b39875a3380930c2f18999c2d010432224aa19",
+      "size": 4811
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/lint.py",
+      "sha256": "b970deb190d8597b0b0c07429be2898edd5bad6cef5c35e0f5b4bdfad7d58982",
+      "size": 2469
+    },
+    {
+      "mode": "0755",
+      "path": "gallery/package.sh",
+      "sha256": "2de760c2a52960d0834e25022d6cc4e741c8cec93bf71cc758d9b3b4a619cda9",
+      "size": 1319
+    },
+    {
+      "mode": "0644",
+      "path": "gallery/placements.tsv",
+      "sha256": "b56ee047c4aa36d26a7ca29b867a4bee61e3fa5aa25f0c4247ee46ca07cff797",
+      "size": 127
+    },
+    {
+      "mode": "0644",
+      "path": "gradle.properties",
+      "sha256": "d97d241c19e0e751a10264c847ee22e6e89462745c9c8037e83c4d6af090ddd9",
+      "size": 601
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/release.json",
+      "sha256": "c6b7e74ae57fce6efbef46cdf8dc94c689f933ee06ba8dbd796e8a6955922ab7",
+      "size": 368
+    },
+    {
+      "mode": "0644",
+      "path": "provenance/upstreams.json",
+      "sha256": "fcc24f8ad35caa694ed317d52591c06d6d60861330b15426362a8b61bd4ab67e",
+      "size": 1443
+    },
+    {
+      "mode": "0644",
+      "path": "settings.gradle",
+      "sha256": "cf8a9357abebaaefe9987545c37253b28540291d25a8016811cdf980998f0ddb",
+      "size": 1431
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/BlueMapNaturesAuraAddon.java",
+      "sha256": "d076768eaa7b99013f12efa799dffb246d9df96c4cedad9572272d12ad0b33b6",
+      "size": 1564
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/activation/AddonRuntime.java",
+      "sha256": "d8c769a1e28b65a07eef190a47daf151abbb1c73fd8f48682fda5fda9c7acac3",
+      "size": 2163
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/adapter/bluemap522/AdapterCompatibility.java",
+      "sha256": "ed84311a18844141dc44fa10ccd618e31007a6f165760a7805049dddec2b4f4f",
+      "size": 1041
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/adapter/bluemap522/BlueMap522Adapter.java",
+      "sha256": "6ec6d8806e74ecec4c6471768ed3b062bcdb40c14fb36848decea5b7af16995f",
+      "size": 1142
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/adapter/bluemap522/ProfileResourceExtension.java",
+      "sha256": "b93f800e7a92af203e34bfaf2fd838b66271510e6d04588cefa8ed311b3163f1",
+      "size": 1707
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/adapter/bluemap522/ProfileResourceExtensionType.java",
+      "sha256": "2cafa6417f1e787896fee92da53e3052f821a9c5b50cbecdb008b70519ae80bd",
+      "size": 931
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/adapter/bluemap522/RegistryGuard.java",
+      "sha256": "5c01f06cf46dfab90b80fe1ad6121d737d89d0228c977aba512c742e2b62f653",
+      "size": 878
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/profile/ArtifactPin.java",
+      "sha256": "9d229d865bae6d7f05eb1e1ceb965a5f7e06be868121d1565522b2fe532f5d7d",
+      "size": 1373
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/profile/ExactArtifactDetector.java",
+      "sha256": "d582ae99fe3e25ade17f8419903b7ce37c3d40ba9e268541606a0aef151b9608",
+      "size": 9964
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/java/io/github/janguenter/bluemap/naturesaura/profile/NaturesAura419Profile.java",
+      "sha256": "3d1885df23dbbe75815c7336710560d9c03b284d838e105c9adeb07b14cced18",
+      "size": 730
+    },
+    {
+      "mode": "0644",
+      "path": "src/main/resources/bluemap.addon.json",
+      "sha256": "35967a1da6ad79aa278640f6640f7a69e7b8c6710eac8e5549038bea19c1552d",
+      "size": 168
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/naturesaura/activation/AddonRuntimeTest.java",
+      "sha256": "3a7df86b789293ed2d342d06cf4c5190fe58ad2910f3dcd57463b19d89ea17a8",
+      "size": 1077
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/naturesaura/adapter/bluemap522/AdapterCompatibilityTest.java",
+      "sha256": "24bec50eaa7d381acbbc85d696f0865f8e2f9b3960b1cb1bc26d6bc5f72912a9",
+      "size": 965
+    },
+    {
+      "mode": "0644",
+      "path": "src/test/java/io/github/janguenter/bluemap/naturesaura/profile/ExactArtifactDetectorTest.java",
+      "sha256": "8fa8e9c8c10941c11c11f7c1cc2c272de013585c821faaa6cd5eab4fafca9c65",
+      "size": 3426
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_pinned_artifacts.py",
+      "sha256": "dc7c6d80796f9d5773183a499aa61320a0126ac21f1fdb5c8e872bbf618ca798",
+      "size": 3508
+    },
+    {
+      "mode": "0755",
+      "path": "tools/verify_staged_equivalence.py",
+      "sha256": "cc8fa6cb1e79b85555b9f10920909b0c03fdc8d78445e07c877674e513fcff9f",
+      "size": 4441
+    }
+  ],
+  "repository": "bluemap-natures-aura-addon",
+  "schema": 1,
+  "spec_sha256": "c4c5f4df767d89c980a56d71c807c28a2ef7a333390ca606974b3667081c28f6",
+  "steps": [
+    {
+      "description": "Validate the reviewed scaffold spec.",
+      "id": "validate-spec",
+      "number": 1,
+      "status": "complete"
+    },
+    {
+      "description": "Render and byte-audit the deterministic seed.",
+      "id": "render-seed",
+      "number": 2,
+      "status": "complete"
+    },
+    {
+      "description": "Initialize the independent child repository and feature branch.",
+      "id": "initialize-repository",
+      "number": 3,
+      "status": "pending"
+    },
+    {
+      "description": "Acquire exact candidate artifacts outside Git and verify their identities.",
+      "id": "acquire-artifacts",
+      "number": 4,
+      "status": "pending"
+    },
+    {
+      "description": "Verify Java 21 and exact BlueMap, API, pack, and loader pins.",
+      "id": "verify-baseline",
+      "number": 5,
+      "status": "pending"
+    },
+    {
+      "description": "Implement family-owned registration, profile, decoder, and renderer.",
+      "id": "implement-family",
+      "number": 6,
+      "status": "pending"
+    },
+    {
+      "description": "Add focused compatibility, decoder, geometry, and fallback tests.",
+      "id": "focused-tests",
+      "number": 7,
+      "status": "pending"
+    },
+    {
+      "description": "Replace the stock-only gallery with the smallest defect fixture.",
+      "id": "defect-gallery",
+      "number": 8,
+      "status": "pending"
+    },
+    {
+      "description": "Build a prototype and deploy it promptly to disposable staging.",
+      "id": "stage-prototype",
+      "number": 9,
+      "status": "pending"
+    },
+    {
+      "description": "Obtain owner comparison and visual acceptance in client and BlueMap.",
+      "id": "owner-acceptance",
+      "number": 10,
+      "status": "pending"
+    },
+    {
+      "description": "Seal staging and publication identities and run the release gate.",
+      "id": "seal-release",
+      "number": 11,
+      "status": "pending"
+    },
+    {
+      "description": "Merge, tag, publish, verify, and update root coordination.",
+      "id": "publish-coordinate",
+      "number": 12,
+      "status": "pending"
+    }
+  ],
+  "template_sha256": "96f6497d2ea982ea702c0208ddf202393bb331b1b24f6600bd9a328ca62f4540"
+}

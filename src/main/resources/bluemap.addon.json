@@ -1,0 +1,6 @@
+{
+  "id": "bluemap-natures-aura",
+  "entrypoint": "io.github.janguenter.bluemap.naturesaura.BlueMapNaturesAuraAddon",
+  "dependencies": [],
+  "soft-dependencies": []
+}
