@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.ItemStackView;
 import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.TimerFill;
+import io.github.janguenter.bluemap.naturesaura.model.NaturesAuraRenderRules.GoldPowderShape;
 import java.util.List;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
@@ -29,6 +30,31 @@ class NaturesAuraRenderRulesTest {
         assertEquals(1, NaturesAuraRenderRules.projectileQuarterTurns(3));
         assertEquals(0, NaturesAuraRenderRules.projectileQuarterTurns(4));
         assertEquals(-1, NaturesAuraRenderRules.projectileQuarterTurns(1));
+    }
+
+    @Test
+    void goldPowderUsesFlatPlanesOnlyForDotAndStraightLines() {
+        assertEquals(GoldPowderShape.DOT, NaturesAuraRenderRules.goldPowderShape(
+                Map.of("north", "none", "east", "none",
+                        "south", "none", "west", "none")));
+        assertEquals(GoldPowderShape.EAST_WEST,
+                NaturesAuraRenderRules.goldPowderShape(
+                        Map.of("north", "none", "east", "side",
+                                "south", "none", "west", "none")));
+        assertEquals(GoldPowderShape.EAST_WEST,
+                NaturesAuraRenderRules.goldPowderShape(
+                        Map.of("north", "none", "east", "side",
+                                "south", "none", "west", "side")));
+        assertEquals(GoldPowderShape.NORTH_SOUTH,
+                NaturesAuraRenderRules.goldPowderShape(
+                        Map.of("north", "side", "east", "none",
+                                "south", "side", "west", "none")));
+        assertEquals(GoldPowderShape.STOCK, NaturesAuraRenderRules.goldPowderShape(
+                Map.of("north", "side", "east", "side",
+                        "south", "none", "west", "none")));
+        assertEquals(GoldPowderShape.STOCK, NaturesAuraRenderRules.goldPowderShape(
+                Map.of("north", "up", "east", "none",
+                        "south", "none", "west", "none")));
     }
 
     @Test

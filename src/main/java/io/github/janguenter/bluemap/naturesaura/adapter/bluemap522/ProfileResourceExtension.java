@@ -32,6 +32,12 @@ final class ProfileResourceExtension implements ResourcePackExtension {
     static final Key SPRING_FRAME = Key.parse("naturesaura:block/spring");
     static final Key SPRING_WATER = Key.parse("naturesaura:block/spring_water");
     static final Key END_PORTAL = Key.parse("minecraft:environment/end_sky");
+    static final Key GOLD_POWDER_DOT =
+            Key.parse("minecraft:block/redstone_dust_dot");
+    static final Key GOLD_POWDER_LINE_0 =
+            Key.parse("minecraft:block/redstone_dust_line0");
+    static final Key GOLD_POWDER_LINE_1 =
+            Key.parse("minecraft:block/redstone_dust_line1");
     private static final Map<Key, Integer> REQUIRED_TEXTURES = Map.of(
             TIMER_AURA, 64,
             PROJECTILE_OVERLAY, 64,
@@ -39,7 +45,10 @@ final class ProfileResourceExtension implements ResourcePackExtension {
             LOWER_GLINT, 64,
             SPRING_FRAME, 16,
             SPRING_WATER, 16,
-            END_PORTAL, 128
+            END_PORTAL, 128,
+            GOLD_POWDER_DOT, 16,
+            GOLD_POWDER_LINE_0, 16,
+            GOLD_POWDER_LINE_1, 16
     );
 
     private final ResourcePack resourcePack;
