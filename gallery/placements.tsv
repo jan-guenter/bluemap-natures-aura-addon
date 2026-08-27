@@ -11,7 +11,7 @@ timer-end-half	half-filled End Aura Timer	190	100	174	naturesaura:aura_timer	hal
 projectile-north	Projectile overlay north	174	100	180	naturesaura:projectile_generator	overlay-north	{next_side:2}
 projectile-east	Projectile overlay east	176	100	180	naturesaura:projectile_generator	overlay-east	{next_side:5}
 projectile-south	Projectile overlay south	178	100	180	naturesaura:projectile_generator	overlay-south	{next_side:3}
-projectile-west	Projectile overlay west	180	100	180	naturesaura:projectile_generator	overlay-west	{next_side:4}
+projectile-west	Projectile overlay west	181	100	180	naturesaura:projectile_generator	overlay-west	{next_side:4}
 generator-limiter	active generator limiter	183	100	180	naturesaura:generator_limit_remover	glint-self-and-above	-
 generator-target	limiter projectile target	183	101	180	naturesaura:projectile_generator	glint-shell	{next_side:2}
 lower-target-nonfull	non-full lower-limiter target	186	100	180	naturesaura:spawn_lamp	dim-glint-shell	-

@@ -11,7 +11,7 @@ execute unless block 190 100 174 naturesaura:aura_timer run tellraw @a {"text":"
 execute unless block 174 100 180 naturesaura:projectile_generator run tellraw @a {"text":"gallery mismatch: projectile-north","color":"red"}
 execute unless block 176 100 180 naturesaura:projectile_generator run tellraw @a {"text":"gallery mismatch: projectile-east","color":"red"}
 execute unless block 178 100 180 naturesaura:projectile_generator run tellraw @a {"text":"gallery mismatch: projectile-south","color":"red"}
-execute unless block 180 100 180 naturesaura:projectile_generator run tellraw @a {"text":"gallery mismatch: projectile-west","color":"red"}
+execute unless block 181 100 180 naturesaura:projectile_generator run tellraw @a {"text":"gallery mismatch: projectile-west","color":"red"}
 execute unless block 183 100 180 naturesaura:generator_limit_remover run tellraw @a {"text":"gallery mismatch: generator-limiter","color":"red"}
 execute unless block 183 101 180 naturesaura:projectile_generator run tellraw @a {"text":"gallery mismatch: generator-target","color":"red"}
 execute unless block 186 100 180 naturesaura:spawn_lamp run tellraw @a {"text":"gallery mismatch: lower-target-nonfull","color":"red"}

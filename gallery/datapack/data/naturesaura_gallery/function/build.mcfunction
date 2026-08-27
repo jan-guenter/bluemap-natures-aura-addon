@@ -34,8 +34,8 @@ data merge block 176 100 180 {next_side:5}
 setblock 178 100 180 naturesaura:projectile_generator
 data merge block 178 100 180 {next_side:3}
 # projectile-west: Projectile overlay west
-setblock 180 100 180 naturesaura:projectile_generator
-data merge block 180 100 180 {next_side:4}
+setblock 181 100 180 naturesaura:projectile_generator
+data merge block 181 100 180 {next_side:4}
 # generator-limiter: active generator limiter
 setblock 183 100 180 naturesaura:generator_limit_remover
 # generator-target: limiter projectile target

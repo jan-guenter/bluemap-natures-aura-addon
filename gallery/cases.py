@@ -64,7 +64,7 @@ PLACEMENTS = (
               "naturesaura:projectile_generator", "overlay-east", "{next_side:5}"),
     Placement("projectile-south", "Projectile overlay south", 178, 100, 180,
               "naturesaura:projectile_generator", "overlay-south", "{next_side:3}"),
-    Placement("projectile-west", "Projectile overlay west", 180, 100, 180,
+    Placement("projectile-west", "Projectile overlay west", 181, 100, 180,
               "naturesaura:projectile_generator", "overlay-west", "{next_side:4}"),
     Placement("generator-limiter", "active generator limiter", 183, 100, 180,
               "naturesaura:generator_limit_remover", "glint-self-and-above"),
