@@ -1,2 +1,28 @@
-case_id	label	x	y	z	block_state	expected
-stock-control	stone stock rendering control	176	100	175	minecraft:stone	stock-visible
+case_id	label	x	y	z	block_state	expected	nbt
+stock-control	stone stock control	174	100	174	minecraft:stone	stock-visible	-
+altar-empty	empty Nature Altar	176	100	174	naturesaura:nature_altar	stock-base-no-item	-
+altar-item	Nature Altar with block item	178	100	174	naturesaura:nature_altar	gold-block-above	{items:{Size:1,Items:[{Slot:0b,id:"minecraft:gold_block",count:1}]}}
+offering-empty	empty Offering Table	180	100	174	naturesaura:offering_table	stock-base-no-item	-
+offering-items	Offering Table with eight items	182	100	174	naturesaura:offering_table	four-gold-blocks	{items:{Size:1,Items:[{Slot:0b,id:"minecraft:gold_block",count:8}]}}
+stand-block	Wood Stand block-item branch	184	100	174	naturesaura:wood_stand	solid-gold-block	{items:{Size:1,Items:[{Slot:0b,id:"minecraft:gold_block",count:1}]}}
+stand-sprite	Wood Stand flat-item branch	186	100	174	naturesaura:wood_stand	flat-stick	{items:{Size:1,Items:[{Slot:0b,id:"minecraft:stick",count:1}]}}
+ender-crate	Ender Crate portal surface	188	100	174	naturesaura:ender_crate	portal-top	-
+timer-end-half	half-filled End Aura Timer	190	100	174	naturesaura:aura_timer	half-dark-aura	{items:{Size:1,Items:[{Slot:0b,id:"naturesaura:aura_bottle",count:1,components:{"naturesaura:aura_bottle_data":{aura_type:"naturesaura:end"}}}]},timer:36000}
+projectile-north	Projectile overlay north	174	100	180	naturesaura:projectile_generator	overlay-north	{next_side:2}
+projectile-east	Projectile overlay east	176	100	180	naturesaura:projectile_generator	overlay-east	{next_side:5}
+projectile-south	Projectile overlay south	178	100	180	naturesaura:projectile_generator	overlay-south	{next_side:3}
+projectile-west	Projectile overlay west	181	100	180	naturesaura:projectile_generator	overlay-west	{next_side:4}
+generator-limiter	active generator limiter	183	100	180	naturesaura:generator_limit_remover	glint-self-and-above	-
+generator-target	limiter projectile target	183	101	180	naturesaura:projectile_generator	glint-shell	{next_side:2}
+lower-target-nonfull	non-full lower-limiter target	186	100	180	naturesaura:spawn_lamp	dim-glint-shell	-
+lower-limiter	lower limiter between targets	187	100	180	naturesaura:lower_limiter	glint-self	-
+lower-target-full	full-cube lower-limiter target	188	100	180	naturesaura:ender_crate	bright-glint-shell	-
+ancient-leaves	fixed pink ancient leaves	174	100	186	naturesaura:ancient_leaves	pink-tint	-
+golden-stage-0	golden leaves biome stage	176	100	186	naturesaura:golden_leaves[stage=0]	biome-foliage-tint	-
+golden-stage-1	golden leaves blend one	177	100	186	naturesaura:golden_leaves[stage=1]	one-third-gold-tint	-
+golden-stage-2	golden leaves blend two	178	100	186	naturesaura:golden_leaves[stage=2]	two-thirds-gold-tint	-
+golden-stage-3	golden leaves final color	179	100	186	naturesaura:golden_leaves[stage=3]	fixed-yellow-tint	-
+gold-powder-west	connected gold powder west	182	100	186	naturesaura:gold_powder	gold-tint-connected	-
+gold-powder-center	connected gold powder center	183	100	186	naturesaura:gold_powder	gold-tint-connected	-
+gold-powder-east	connected gold powder east	184	100	186	naturesaura:gold_powder	gold-tint-connected	-
+spring-water	Spring water-tinted layer	187	100	186	naturesaura:spring	frame-and-water-visible	-
