@@ -98,6 +98,7 @@ jobs:
           test -n "${expected_toolkit_version}"
           test "$(bluemap-addon-toolkit --version)" = \
             "${expected_toolkit_version}"
+          bluemap-addon-toolkit conventions check .
 
       - name: Set up Gradle 9.6.1
         uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
