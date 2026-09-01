@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "unpublished-migration-candidate",
+  "status": "owner-accepted-release-candidate",
   "published": false,
   "version": "0.1.0-alpha.2",
   "release_date": "2026-09-01",
@@ -81,9 +81,56 @@
     "production_archive_boundary_gate": true,
     "sources_archive_boundary_gate": true,
     "local_candidate_artifact_identity_gate": true,
-    "authoritative_pr_ci_reproduction": false,
+    "authoritative_pr_ci_reproduction": true,
     "local_gradle_version": "9.6.1",
     "local_java_runtime": "21.0.12.1+1",
-    "exact_alpha_2_runtime_review": false
+    "exact_alpha_2_runtime_review": true
+  },
+  "owner_accepted_staging": {
+    "visual_acceptance": true,
+    "accepted_on": "2026-09-01",
+    "scope": "Owner accepted the Nature's Aura gallery in the combined 51-add-on BlueMap 5.23 integration review. The accepted renderer, profile, textures, and gallery are the alpha.2 candidate bytes; the aggregate staging JAR differs only at the integration entrypoint overlay.",
+    "integration_run": "bluemap-atmons-integration-20260901-next-review-batch-v38",
+    "candidate_manifest": {
+      "sha256": "6d27c380945775bcec6a93bb510263e2aaaf23f8033fddd934bf3191634c120d",
+      "local_candidate_base_source_commit": "31af0587d73f6c2d73351e7bb0ce8ae19322e5af",
+      "local_candidate_base_artifact": {
+        "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.jar",
+        "size": 120921,
+        "sha256": "4852efc9331ca3d41f8290c22b32c5af54cb417da987180dc8e342e0bd86c979"
+      },
+      "aggregate_staging_artifact": {
+        "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.1.jar",
+        "size": 121288,
+        "sha256": "d54340f8b96b00a94ea09ed455acf5cbc351bb9ec70c336695c44b1ced224d10"
+      }
+    },
+    "browser_capture": {
+      "file_name": "bluemap-v38-natures-aura.png",
+      "size": 1098965,
+      "sha256": "3f1a81f802ea6bd05e0eb4ec6c17f3a3a72988b5d151768577b963e1c8b9fb12"
+    }
+  },
+  "final_release_artifacts": {
+    "production_jar": {
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.jar",
+      "size": 120921,
+      "sha256": "4852efc9331ca3d41f8290c22b32c5af54cb417da987180dc8e342e0bd86c979"
+    },
+    "sources_jar": {
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2-sources.jar",
+      "size": 84380,
+      "sha256": "96f412d24db6c15529ddb407df33f47bff45dcc3e02951cb52435891ee7f99ed"
+    },
+    "pom": {
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.pom",
+      "size": 1349,
+      "sha256": "43db74064c44e8dea55140ef7a8e4bedbb973f7ab1dc942c9cd60969c3c98214"
+    },
+    "gradle_module": {
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.module.json",
+      "size": 2854,
+      "sha256": "94b24be4fa188ebd03e8b845674b7967bbff452c02caa4e72ab6d347ec8612d5"
+    }
   }
 }
