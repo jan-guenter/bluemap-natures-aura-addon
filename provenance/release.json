@@ -1,78 +1,80 @@
 {
   "schema_version": 1,
-  "status": "owner-accepted-release-candidate",
-  "version": "0.1.0-alpha.1",
-  "release_date": "2026-08-27",
+  "status": "unpublished-migration-candidate",
+  "published": false,
+  "version": "0.1.0-alpha.2",
+  "release_date": "2026-09-01",
   "repository": "https://github.com/jan-guenter/bluemap-natures-aura-addon",
-  "tag": "v0.1.0-alpha.1",
-  "maven_coordinate": "io.github.jan-guenter:bluemap-natures-aura-addon:0.1.0-alpha.1",
-  "owner_accepted_staging": {
-    "accepted_at": "2026-08-27",
-    "commit": "506ba6d61a8c66dd9ed557ece917630053b10c3b",
-    "tree": "d38fa836236272f8a9511d5b81d9264f6fa20db2",
-    "production_jar_size": 115631,
-    "production_jar_sha256": "f3962bf7fb08a949d008fc8843806590d76840b8e8cd31a4a03bb97871ef046b",
-    "gallery_archive_size": 3348,
-    "gallery_archive_sha256": "8d33788f2a13074802d829c292b88b3ece888bbcfe11fef345508f93042c1264",
-    "visual_acceptance": true
+  "tag": "v0.1.0-alpha.2",
+  "maven_coordinate": "io.github.jan-guenter:bluemap-natures-aura-addon:0.1.0-alpha.2",
+  "bluemap": {
+    "version": "5.22-feature.backport-5.23-stateless-java-web-server-46",
+    "commit": "7e07f4e74ec1e92a6ead9aa1e66054af3e133aac",
+    "api_commit": "285c9a60eff3ac2b0cab308ce1058d1565be0971"
   },
-  "accepted_staging_entries": {
-    "path": "provenance/accepted-staging-entries.sha256",
-    "entry_count": 35,
-    "sha256": "83e0c8e6fc73a9848afbced2e7a5eeed7e03f6a9c8fa58afa2a725a28b2dee18"
+  "adapter_api": {
+    "version": "0.1.0-alpha.2",
+    "commit": "e81f08bc4bfbf02d810ec8949a019130e2e61634",
+    "source_tree": "2f974c9bb2ba13888d69682f86f30f58922d30eb",
+    "source_files_compiled": 4,
+    "module_jar_installed": false,
+    "module_jar_bundled": false,
+    "module_jar_nested": false,
+    "local_adapter_package": "io.github.janguenter.bluemap.naturesaura.adapter.bluemap523"
   },
-  "final_release_artifacts": {
+  "baseline_release": {
+    "version": "0.1.0-alpha.1",
+    "tag": "v0.1.0-alpha.1",
+    "commit": "8c2cef5b556824a1d5ff7f4ed69d7056847bab36",
+    "production_jar_size": 115630,
+    "production_jar_sha256": "ba98a71dce55a343cfdf3c2f22421beebf26ac631f8a42841643da6f03d5f5e6",
+    "owner_visual_acceptance": "2026-08-27"
+  },
+  "candidate_artifacts": {
     "production_jar": {
-      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.1.jar",
-      "size": 115630,
-      "sha256": "ba98a71dce55a343cfdf3c2f22421beebf26ac631f8a42841643da6f03d5f5e6"
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.jar",
+      "size": 0,
+      "sha256": "PENDING"
     },
     "sources_jar": {
-      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.1-sources.jar",
-      "size": 79148,
-      "sha256": "1de2324e2e908c3e5827c4289d5c5b6cf83d6efe45c53c2b9f57cde0d6e50af2"
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2-sources.jar",
+      "size": 0,
+      "sha256": "PENDING"
     },
     "pom": {
-      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.1.pom",
-      "size": 1349,
-      "sha256": "6947d6b7a9510c0ed08bf490c9fd094e33434c067ad3972ef893d5341403f29f"
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.pom",
+      "size": 0,
+      "sha256": "PENDING"
     },
     "gradle_module": {
-      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.1.module.json",
-      "size": 2854,
-      "sha256": "ca3f91807c5b813df681ca58bdf25f2652a94ff2f8b1359d0dd263064fe686e2"
+      "file_name": "bluemap-natures-aura-addon-0.1.0-alpha.2.module.json",
+      "size": 0,
+      "sha256": "PENDING"
     }
   },
-  "staged_equivalence": {
-    "entry_manifest": "provenance/accepted-staging-entries.sha256",
-    "identical_non_manifest_entries": 35,
-    "whole_jar_byte_identical": false,
-    "only_changed_entry_bytes": "META-INF/MANIFEST.MF",
-    "change_reason": "Implementation-Version changed from the accepted SNAPSHOT marker to the final release version."
-  },
-  "gallery": {
-    "archive_file_name": "naturesaura-gallery-accepted.zip",
-    "size": 3348,
-    "sha256": "8d33788f2a13074802d829c292b88b3ece888bbcfe11fef345508f93042c1264",
-    "review_cases": 27,
-    "block_entity_fixtures": 10,
-    "published_as_release_asset": false
+  "preserved_contract": {
+    "renderer_hosts": 8,
+    "audited_tint_defects": 4,
+    "gallery_cases": 27,
+    "gallery_sources_changed": false,
+    "exact_mod_profile_changed": false,
+    "renderer_behavior_changed": false,
+    "stock_fallback_changed": false
   },
   "ephemeral_ci_inputs": {
     "naturesAura": {
-      "curseforge_project": 306626,
-      "curseforge_file": 6948833,
+      "file_name": "NaturesAura-41.9.jar",
       "size": 1443280,
       "sha256": "c76a257fdf5da2bf2c21dcc4e474a7a1ff11202a13fca02fedc97e329426e517"
-    },
-    "policy": "Downloaded only into the ephemeral runner, verified before use, and never bundled or uploaded."
+    }
   },
   "verification": {
-    "production_jar_exact_byte_gate": true,
-    "sources_jar_exact_byte_gate": true,
-    "publication_metadata_exact_byte_gate": true,
-    "gallery_archive_exact_byte_gate": true,
-    "staged_equivalence_gate": true,
-    "exact_input_gate": true
+    "exact_input_gate": true,
+    "adapter_api_gitlink_and_source_tree_gate": true,
+    "production_archive_boundary_gate": true,
+    "sources_archive_boundary_gate": true,
+    "local_candidate_artifact_identity_gate": false,
+    "authoritative_pr_ci_reproduction": false,
+    "exact_alpha_2_runtime_review": false
   }
 }
